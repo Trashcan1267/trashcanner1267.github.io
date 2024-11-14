@@ -157,13 +157,13 @@
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .image-box4 {
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            width: 150px;
-            height: 150px;
-            background-image: url('https://i.ibb.co/x3y32bV/output-onlinepngtools-1.png');
-            background-size: cover;
-            background-position: center;
-        }
+.image-box4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://i.ibb.co/x3y32bV/output-onlinepngtools-1.png'); /* Correct absolute URL */
+    background-size: cover;
+    background-position: center;
+}
