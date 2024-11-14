@@ -1,0 +1,173 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(135deg, #333, #555);
+    overflow: hidden;
+    position: relative; /* Ensure positioning for absolute elements */
+}
+
+header {
+    background: linear-gradient(to right, #333, #666, #333);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #666;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+header h1 {
+    font-size: 3vw;
+    background: linear-gradient(to right, #bbb, #fff, #bbb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.6);
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    background: url('https://img.freepik.com/premium-photo/view-from-bottomup-view-highrise-dark-building-against-gloomy-grayblue-background-highrise-skyscraper-highrise-abstract-building-building-industrial-image-3d-render_507676-1371.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(5px); /* Optional: Apply a blur effect on the background */
+    border-radius: 8px;
+    margin: 20px;
+    position: relative;
+}
+
+.wwy {
+    position: absolute;
+    right: 15px;
+    bottom: 180px;
+    color: #f0f0f0;
+    font-size: 5.5rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+footer {
+    background: linear-gradient(to right, #333, #666, #333);
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #666;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    z-index: 10; /* Keeps footer above other content */
+}
+
+footer p {
+    font-size: clamp(1rem, 3vw, 2rem); /* Responsive font scaling */
+    background: linear-gradient(to right, #bbb, #fff, #bbb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Allow transform to apply */
+}
+
+footer p:hover {
+    transform: scale(1.05); /* Apply scaling effect */
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.6); /* Apply text shadow */
+}
+
+/* Rotating background moved 75 degrees, then slides right every 5 seconds */
+.background {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+    transform: rotate(75deg); /* Keep the 75-degree rotation */
+    animation: swipeBackground 5s linear infinite;
+}
+
+@keyframes swipeBackground {
+    0% {
+        transform: translateX(-100%) rotate(75deg); /* Start off-screen left */
+    }
+    100% {
+        transform: translateX(100%) rotate(75deg); /* Move to off-screen right */
+    }
+}
+
+/* Small box for the image in bottom-left corner of the main content */
+.image-box {
+    position: absolute;
+    bottom: 10px;
+    left: 65px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://cdn.britannica.com/96/115796-050-3B9D84C6/Hamilton-Ont.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.image-box2 {
+    position: absolute;
+    bottom: 10px;
+    left: 230px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c0/%C3%89glise_ste-famille.JPG');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.image-box3 {
+    position: absolute;
+    bottom: 10px;
+    left: 395px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://bloximages.chicago2.vip.townnews.com/simcoe.com/content/tncms/assets/v3/editorial/c/f0/cf0ea198-de81-59ed-90c6-62364356ce51/63d1b88f256f0.image.jpg?resize=1200%2C840');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.image-box4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://i.pinimg.com/236x/ef/4b/62/ef4b629fcd7fe421a4b171aa4121065d.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
